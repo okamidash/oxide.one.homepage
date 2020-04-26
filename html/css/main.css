@@ -1,0 +1,83 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #ebeceb;
+}
+
+html, body {
+    height: 100vh;
+    background-color: #1e3136;
+    margin: 0;
+}
+
+.container {
+    align-items: center;
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: column;
+    height: 95vh;
+    justify-content: center;
+}
+
+.infowrapper {
+    align-items: center;
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row wrap;
+    justify-content: center;
+}
+
+.fadebox {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.quotebox {
+    font-weight: 200;
+    text-align: center;
+    max-width: 50vw;
+}
+p { margin: 3pt; }
+
+.header {
+    font-size: 40pt;
+    text-align: center;
+}
+
+.footer {
+    padding-left: 1vh;
+    font-weight: 200;
+}
+
+.heightbox {
+    height: 30vh;
+}
+
+.infoitem {
+    padding-left: 2pt;
+    padding-right: 2pt;
+    font-weight: 200;
+    font-size: 20pt;
+}
+
+.filler {
+    flex-grow: 1;
+}
+
+@media all and (max-width: 500px) {
+  .infowrapper {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column wrap;
+  }
+  .quotebox {
+    max-width: 80vw;
+  }
+}
+

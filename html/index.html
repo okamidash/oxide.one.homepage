@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Monserrat fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+</head>
+<body>
+<div class="container">
+    <div class="fadebox animated fadeInUp fast">
+    <header class="header">
+        oxide.one
+    </header>
+    <div class="infowrapper">
+        <div class="infoitem">
+            <p>
+                about
+            </p>
+        </div>
+        <div class="infoitem">
+            <p>
+                contact
+            </p>
+        </div>
+        <div class="infoitem">
+            <p>
+                sites
+            </p>
+        </div>
+        <div class="infoitem">
+            <p>
+                privacy
+            </p>
+        </div>
+    </div>
+    <div class="quotebox" id="quotebox">
+        BLANK QUOTE
+    </div>
+    </div>
+    <div class="heightbox">
+    </div>
+</div>
+<footer class="footer">
+    <p>Copyright Eve Rogers 2020</p>
+</footer>
+<script>
+var quotebox = document.getElementById("quotebox");
+async function getQuote()
+{
+  let response = await fetch("/quote");
+  let data = await response.json();
+  return data;
+}
+console.log(quotebox)
+getQuote()
+  .then(data => quotebox.innerHTML = `<p>${data.quote}</p>`);
+</script>
+</body>
+</html>

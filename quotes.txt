@@ -1,0 +1,16 @@
+Well, it works on my machine
+Just debug in production
+What do you mean prod is down?
+localhost is the best website
+now you have two problems.
+404 not found
+rm -rf /
+alias ls=sl
+echo hello world
+cat /dev/null
+${witty quote}
+:(){ :|:& };:
+I know, I'll use regular expressions.
+more magic
+Real Programmers write in FORTRAN.
+

@@ -1,0 +1,25 @@
+{
+  "name": "oxide.one",
+  "version": "1.0.0",
+  "description": "Homepage for oxide.one",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okamidash/oxide.one.homepage.git"
+  },
+  "keywords": [
+    "homepage"
+  ],
+  "author": "Okami Dash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okamidash/oxide.one.homepage/issues"
+  },
+  "homepage": "https://github.com/okamidash/oxide.one.homepage#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
