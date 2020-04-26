@@ -10,29 +10,19 @@
 </head>
 <body>
 <div class="flexbox container">
-    <header class="header typewriter">
-       <h1 id="headertext"></h1>
-    </header>
-    <div class="flexbox infowrapper">
-        <div class="infoitem"><p><a href="/about">about</a></p></div>
-        <div class="infoitem"><p><a href="/contact">contact</a></p></div>
-        <div class="infoitem"><p><a href="/sites">sites</a></p></div>
-        <div class="infoitem"><p><a href="/privacy">privacy</a></p></div>
-    </div>
-    <div class="quotebox" id="quotebox"></div>
+    <header class="header typewriter"><h1 id="headertext"></h1></header>
+    <div class="flexbox infowrapper"><div class="infoitem">
+            <p>I care about privacy.</p>
+            <p>No analytics are enabled, and the only information I keep are logs. (IP, user-agent)</p>
+    </div></div>
+    <p><a href="/">home</a></p>
     <div class="heightbox"></div>
 </div>
 <footer class="footer"><p>Copyright Eve Rogers 2020</p></footer>
 <script>
-var headerText = "oxide.one"
+var headerText = "about"
 var quoteBox = document.getElementById("quotebox");
 var headerBox = document.getElementById("headertext");
-async function getQuote()
-{
-  let response = await fetch("/quote");
-  let data = await response.json();
-  return data;
-}
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -48,8 +38,6 @@ async function typeText()
     }
 }
 
-getQuote()
-  .then(data => quoteBox.innerHTML = `${data.quote}`);
 typeText()
 </script>
 </body>
